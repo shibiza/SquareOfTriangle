@@ -5,21 +5,31 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class TriangleTest {
 
     @ParameterizedTest
     @MethodSource("testAreaCases")
-    void testArea(final double expectedArea, Triangle triangle) {
-        assertEquals(expectedArea, triangle.areaOfTriangle());
+    public void method1(double expected, double a, double b, double c) {
+        assertEquals(expected, Triangle.areaOfTriangle(a, b, c));
     }
 
     static Stream<Arguments> testAreaCases() {
         return Stream.of(
-                Arguments.of(1.9843134, 2, 2, 3),
-                Arguments.of(2.90473, 4, 2, 3),
-                Arguments.of(1.9843134, 4, 1, 4)
-                );
+                arguments(0.49607837082461076, 1.0, 1.0, 1.5),
+                arguments(0.7261843774138906, 2.0, 1.0, 1.5),
+                arguments(1.3331705629813464, 2.0, 3.0, 1.5),
+                arguments(2.4803918541230536, 2.0, 3.0, 2.5),
+                arguments(2.0453835214941964, 2.0, 4.0, 2.5)
+        );
     }
-}
 
+
+
+
+
+
+
+
+}
