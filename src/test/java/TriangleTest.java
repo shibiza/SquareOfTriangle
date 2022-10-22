@@ -24,12 +24,4 @@ public class TriangleTest {
                 arguments(2.0453835214941964, 2.0, 4.0, 2.5)
         );
     }
-
-
-
-
-
-
-
-
 }
