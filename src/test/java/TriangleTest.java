@@ -11,7 +11,7 @@ public class TriangleTest {
 
     @ParameterizedTest
     @MethodSource("testAreaCases")
-    public void method1(double expected, double a, double b, double c) {
+    public void methodForTestTriangle(double expected, double a, double b, double c) {
         assertEquals(expected, Triangle.areaOfTriangle(a, b, c));
     }
 
@@ -21,7 +21,8 @@ public class TriangleTest {
                 arguments(0.7261843774138906, 2.0, 1.0, 1.5),
                 arguments(1.3331705629813464, 2.0, 3.0, 1.5),
                 arguments(2.4803918541230536, 2.0, 3.0, 2.5),
-                arguments(2.0453835214941964, 2.0, 4.0, 2.5)
+                arguments(2.0453835214941964, 2.0, 4.0, 2.5),
+                arguments(13.57487914310842, 5.0, 5.5, 8.0)
         );
     }
 }
